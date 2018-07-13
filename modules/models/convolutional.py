@@ -77,15 +77,15 @@ def model_deepFlavourReference(Inputs,nclasses,nregclasses,dropoutRate=0.1,momen
     
     
     #
-    cpf  = LSTM(150,go_backwards=True,implementation=2, name='cpf_lstm')(cpf)
+    cpf  = GRU(150,go_backwards=True,implementation=2, name='cpf_gru')(cpf)
     cpf=BatchNormalization(momentum=momentum,name='cpflstm_batchnorm')(cpf)
     cpf = Dropout(dropoutRate)(cpf)
     
-    npf = LSTM(50,go_backwards=True,implementation=2, name='npf_lstm')(npf)
+    npf = GRU(50,go_backwards=True,implementation=2, name='npf_gru')(npf)
     npf=BatchNormalization(momentum=momentum,name='npflstm_batchnorm')(npf)
     npf = Dropout(dropoutRate)(npf)
     
-    vtx = LSTM(50,go_backwards=True,implementation=2, name='vtx_lstm')(vtx)
+    vtx = GRU(50,go_backwards=True,implementation=2, name='vtx_gru')(vtx)
     vtx=BatchNormalization(momentum=momentum,name='vtxlstm_batchnorm')(vtx)
     vtx = Dropout(dropoutRate)(vtx)
     
