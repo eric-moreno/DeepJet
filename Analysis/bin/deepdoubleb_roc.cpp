@@ -18,7 +18,7 @@ int main(){
 
 
 	friendTreeInjector in;
-	in.addFromFile("/data/shared/BumbleB/20180401_ak8/doubleb_merged_h_q_lessQCD_test_samples_predict/tree_association.txt")
+	in.addFromFile("/data/shared/BumbleB/20180401_ak8/doubleb_merged_h_q_lessQCD_test_samples_predict/tree_association.txt");
 
 	//in.showList();
 
