@@ -464,7 +464,7 @@ def model_deepDoubleBReference(inputs, num_classes, num_regclasses, datasets = [
                              kernel_initializer=kernel_initializer, use_bias=False, name='%s_conv2'%ds, 
                              activation = 'relu')(x)
         x = SpatialDropout1D(rate=0.1)(x)
-        x = GRU(50,go_backwards=True,implementation=2,name='%s_gru'%ds)(x)
+        x = LSTM(50,go_backwards=True,implementation=2,name='%s_gru'%ds)(x)
         x = Dropout(rate=0.1)(x)
         flattenLayers.append(x)
 
