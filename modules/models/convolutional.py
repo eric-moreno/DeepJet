@@ -452,8 +452,8 @@ def model_deepDoubleBReference(inputs, num_classes, num_regclasses, datasets = [
         normedLayer = BatchNormalization(momentum=0.3,name = '%s_input_batchnorm'%datasets[i])(inputs[i])
         normalizedInputs.append(normedLayer)
     
-    size_inputs = 'The size of the inputs is' + len(inputs)
-    size = 'The size of the normalizedInputs is' + len(normalizedInputs)
+    size_inputs = 'The size of the inputs is ' + str(len(inputs))
+    size = 'The size of the normalizedInputs is ' + str(len(normalizedInputs))
     print size
     print size_inputs
     
